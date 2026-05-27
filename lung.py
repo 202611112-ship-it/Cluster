@@ -172,21 +172,32 @@ if st.button("✨ 군집 예측하기 ✨"):
     )
 
     # 제목
-    ax.set_title(
-        ' 폐암 위험 군집 시각화 ',
-        fontsize=25,
-        color='purple'
-    )
+    # 제목
+ax.set_title(
+    ' 폐암 위험 군집 시각화 ',
+    fontsize=25,
+    color='purple',
+    fontproperties=fontprop
+)
 
-    # 축 이름
-    ax.set_xlabel(' 지역환경지수', fontsize=18)
-    ax.set_ylabel(' 음주량', fontsize=18)
+# 축 이름
+ax.set_xlabel(
+    ' 지역환경지수',
+    fontsize=18,
+    fontproperties=fontprop
+)
 
-    # 격자
-    ax.grid(True, linestyle='--', alpha=0.5)
+ax.set_ylabel(
+    ' 음주량',
+    fontsize=18,
+    fontproperties=fontprop
+)
 
-    # 범례
-    ax.legend(fontsize=15)
+# 범례
+ax.legend(
+    prop=fontprop,
+    fontsize=15
+)
 
     # 출력
     st.pyplot(fig)
