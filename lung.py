@@ -193,13 +193,14 @@ ax.set_ylabel(
 )
 
 # 범례
-ax.legend(
-    prop=fontprop,
-    fontsize=15
-)
+    # 범례
+    ax.legend(
+        prop=fontprop,
+        fontsize=15
+    )
 
     # 출력
-st.pyplot(fig)
+    st.pyplot(fig)
 
     # 마지막 감성멘트
     st.markdown("""
