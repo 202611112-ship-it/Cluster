@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 
 # ---------------- 한글 폰트 ----------------
-font_path = "fonts/NanumGothic.ttf"
+font_path = "NanumGothic.otf"
 fontprop = fm.FontProperties(fname=font_path)
 
 plt.rc('font', family=fontprop.get_name())
