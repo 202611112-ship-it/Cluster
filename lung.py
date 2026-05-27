@@ -10,7 +10,7 @@ plt.rcParams['axes.unicode_minus'] = False
 
 # ---------------- 페이지 설정 ----------------
 st.set_page_config(
-    page_title="보노보노 폐암 시스템",
+    page_title="폐암 시스템",
     page_icon="🌈",
     layout="wide"
 )
@@ -98,15 +98,15 @@ model = joblib.load("lung_model.pkl")
 scaler = joblib.load("lung_scaler.pkl")
 
 # ---------------- 제목 ----------------
-st.title("🌈 보노보노 폐암 위험 군집 시스템 🌈")
+st.title("🌈 폐암 위험 군집 시스템 🌈")
 
 st.markdown("""
 <h2 style='text-align:center; color:blue;'>
-🐟 건강이란 뭘까...? 🐟
+🐟 건강 🐟
 </h2>
 """, unsafe_allow_html=True)
 
-st.write("생활 습관 정보를 입력하면 군집을 예측해준다...")
+st.write("생활 습관 정보를 입력하면 군집을 예측해줍니다...")
 
 # ---------------- 입력창 ----------------
 col1, col2, col3 = st.columns(3)
@@ -139,7 +139,7 @@ if st.button("✨ 군집 예측하기 ✨"):
     st.balloons()
 
     st.success(
-        f"🌟 이 환자는 {pred_cluster[0]}번 군집에 속한다!! 🌟"
+        f"🌟 이 환자는 {pred_cluster[0]}번 군집에 속합니다!! 🌟"
     )
 
     # ---------------- 그래프 ----------------
@@ -191,6 +191,6 @@ if st.button("✨ 군집 예측하기 ✨"):
     # 마지막 감성멘트
     st.markdown("""
     <h1 style='color:blue; text-align:center;'>
-    🐚 인생은 원래 폐가 힘든 거야... 🐚
+    🐚 폐 건강을 지킵시다 🐚
     </h1>
     """, unsafe_allow_html=True)
