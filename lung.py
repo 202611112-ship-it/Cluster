@@ -78,12 +78,6 @@ p, label, div {
     font-size: 30px;
 }
 
-/* 그래프 영역 */
-.css-1d391kg {
-    background-color: rgba(255,255,255,0.5);
-    border-radius: 30px;
-}
-
 </style>
 """, unsafe_allow_html=True)
 
@@ -153,7 +147,7 @@ if st.button("✨ 군집 예측하기 ✨"):
     ax.set_facecolor('#fffacd')
 
     # 기존 데이터
-    ax.scatter(
+    scatter = ax.scatter(
         df['지역환경지수'],
         df['음주량'],
         c=df['cluster'],
@@ -168,31 +162,33 @@ if st.button("✨ 군집 예측하기 ✨"):
         c='red',
         s=500,
         marker='X',
-        label=' 새 환자 '
+        label='새 환자'
     )
 
     # 제목
-ax.set_title(
-    ' 폐암 위험 군집 시각화 ',
-    fontsize=25,
-    color='purple',
-    fontproperties=fontprop
-)
+    ax.set_title(
+        '폐암 위험 군집 시각화',
+        fontsize=25,
+        color='purple',
+        fontproperties=fontprop
+    )
 
-# 축 이름
-ax.set_xlabel(
-    ' 지역환경지수',
-    fontsize=18,
-    fontproperties=fontprop
-)
+    # 축 이름
+    ax.set_xlabel(
+        '지역환경지수',
+        fontsize=18,
+        fontproperties=fontprop
+    )
 
-ax.set_ylabel(
-    ' 음주량',
-    fontsize=18,
-    fontproperties=fontprop
-)
+    ax.set_ylabel(
+        '음주량',
+        fontsize=18,
+        fontproperties=fontprop
+    )
 
-# 범례
+    # 격자
+    ax.grid(True, linestyle='--', alpha=0.5)
+
     # 범례
     ax.legend(
         prop=fontprop,
