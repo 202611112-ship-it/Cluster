@@ -172,7 +172,6 @@ if st.button("✨ 군집 예측하기 ✨"):
     )
 
     # 제목
-    # 제목
 ax.set_title(
     ' 폐암 위험 군집 시각화 ',
     fontsize=25,
@@ -200,7 +199,7 @@ ax.legend(
 )
 
     # 출력
-    st.pyplot(fig)
+st.pyplot(fig)
 
     # 마지막 감성멘트
     st.markdown("""
