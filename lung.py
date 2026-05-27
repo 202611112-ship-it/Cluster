@@ -5,7 +5,10 @@ import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 
 # ---------------- 한글 폰트 ----------------
-plt.rc('font', family='Malgun Gothic')
+font_path = "fonts/NanumGothic.ttf"
+fontprop = fm.FontProperties(fname=font_path)
+
+plt.rc('font', family=fontprop.get_name())
 plt.rcParams['axes.unicode_minus'] = False
 
 # ---------------- 페이지 설정 ----------------
